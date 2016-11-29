@@ -9,6 +9,24 @@
     <link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/stylesheets/github-light.css" media="screen">
   </head>
+  <style>
+	#ds-thread.ds-thread {
+	  #ds-reset {
+		.ds-comments-info {
+		  .ds-comments-tabs {
+			li.ds-tab {
+			  .ds-comments-tab-weibo {
+				display: none;
+			  }
+			}
+		  }
+		}
+		.ds-powered-by {
+		  display: none;
+		}
+	  }
+	}
+  </style>
   <body>
   <body>
     <section class="page-header">
@@ -28,6 +46,28 @@
       </footer>
 
     </section>
-
+	
+	{% for post in site.posts %}
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="{{ post.url }}" data-title="{{page.title}}" data-url="http://blog.heytobye.com{{ post.url }}"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+		var duoshuoQuery = {short_name:"heytobye"};
+			(function() {
+				var ds = document.createElement('script');
+				ds.type = 'text/javascript';ds.async = true;
+				ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+				ds.charset = 'UTF-8';
+				(document.getElementsByTagName('head')[0] 
+				 || document.getElementsByTagName('body')[0]).appendChild(ds);
+			})();
+			$(document).on('click', '#ds-thread textarea[name=message]', function(){
+			   $('#ds-sync-checkbox').prop('checked', false);
+			});
+		</script>
+<!-- 多说公共JS代码 end -->
+	{% endfor %}
+	
   </body>
 </html>
