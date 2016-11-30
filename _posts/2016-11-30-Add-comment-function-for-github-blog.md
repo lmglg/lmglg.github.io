@@ -4,7 +4,7 @@ title: Github Blog添加评论功能（多说）
 ---
 这两天在玩github blog 索性看了下为github添加评论功能，搜了下发现有个不错的社会化评论系统“[多说](http://duoshuo.com/ "多说")”http://duoshuo.com/ ，而且不少github blog主都使用了这个评论系统。
 废话不多少说，其实“多少”已经将对接做的很简单了：
-	1. 访问多说http://duoshuo.com/ 官网点击我要安装，使用个微博、qq之类的社交帐号授权下，完成后会出现“创建站点”，在“站点地址”栏处填入blog域名，如“http://blog.heytobye.com”, 完成后会出现示例代码。
+1. 访问多说http://duoshuo.com/ 官网点击我要安装，使用个微博、qq之类的社交帐号授权下，完成后会出现“创建站点”，在“站点地址”栏处填入blog域名，如“http://blog.heytobye.com”, 完成后会出现示例代码。
 ````
 	<!-- 多说评论框 start -->
 	<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
@@ -23,7 +23,7 @@ var duoshuoQuery = {short_name:"heytobye"};
 	</script>
 <!-- 多说公共JS代码 end -->
 ````
-	2.复制粘帖至github blog的模板页“default.html”的<body></body>之间，我的blog套用了Jekyll语法，所以配置为：
+2.复制粘帖至github blog的模板页“default.html”的<body></body>之间，我的blog套用了Jekyll语法，所以配置为：
 ````
 {% for post in site.posts %}
  <div class="ds-thread" 
@@ -44,5 +44,6 @@ var duoshuoQuery = {short_name:"heytobye"};
 </script>
 {% endfor %}
 ````
-	3. commit下，push下，就算完成了，其它人说要等10分钟，其实我这感觉push成功就完事了。
+当然你可以将<sctript></sctript>添加至你的JS文件内。
+3. commit下，push下，就算完成了，其它人说要等10分钟，其实我这感觉push成功就完事了。
 致谢：“[多说](http://duoshuo.com "多说")”
