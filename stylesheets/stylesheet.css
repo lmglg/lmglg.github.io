@@ -9,6 +9,42 @@ body {
   line-height: 1.5;
   color: #606c71; }
 
+.note {
+    margin-left: -50px;
+	margin: 30px 0;
+	padding: 20px 20px 24px;
+    padding-left: 50px;
+	border-radius: 0 5px 5px 0;
+    position: relative;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 0 rgba(0,0,0,0.3);
+	background-color: #7e6d42;
+	background-image: linear-gradient(to bottom, #7e6d42 0%, #5c4e35 100%);
+}
+
+.note:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    border-color: transparent #222 #222 transparent;
+    border-style: solid;
+    border-width: 5px;
+    width: 0;
+    height: 0;
+}
+
+.note:after {
+    content: '\2605';
+    color: #fc0;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+  
+  
 a {
   color: #1e6bb8;
   text-decoration: none; }
