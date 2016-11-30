@@ -9,12 +9,14 @@ title: Github Blog添加评论功能（多说）
 1. 访问多说http://duoshuo.com/ 官网点击我要安装，使用个微博、qq之类的社交帐号授权下，完成后会出现“创建站点”，在“站点地址”栏处填入blog域名，如“http://blog.heytobye.com”, 完成后会出现示例代码。
 
 2. 复制粘帖至github blog的模板页“default.html”的<body></body>之间，我的blog套用了Jekyll语法，所以配置为：
-{% highlight js %}
+{% highlight html %}
 <div class="ds-thread" 
 	data-thread-key="/2016/11/28/hello-github-blog.html"
 	data-title="Github Blog添加评论功能（多说）"
-	data-url="http://blog.heytobye.com/2016/11/28/hello-github-blog.html">
+	data-url="http://yourblogdomain/2016/11/28/hello-github-blog.html">
 </div>
+{% endhighlight %}
+{% highlight js %}
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"heytobye"};
 	(function() {
