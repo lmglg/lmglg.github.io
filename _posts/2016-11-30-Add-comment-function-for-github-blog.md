@@ -10,24 +10,22 @@ title: Github Blog添加评论功能（多说）
 
 2. 复制粘帖至github blog的模板页“default.html”的<body></body>之间，我的blog套用了Jekyll语法，所以配置为：
 {% highlight js %}
-    {% for post in site.posts %}
-		 <div class="ds-thread" 
-				data-thread-key="{{ post.url }}"
-				data-title="{{page.title}}"
-				data-url="http://blog.heytobye.com{{ post.url }}">
-		</div>
-		<script type="text/javascript">
-		var duoshuoQuery = {short_name:"heytobye"};
-			(function() {
-				var ds = document.createElement('script');
-				ds.type = 'text/javascript';ds.async = true;
-				ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-				ds.charset = 'UTF-8';
-				(document.getElementsByTagName('head')[0] 
-				 || document.getElementsByTagName('body')[0]).appendChild(ds);
-			})();
-		</script>
-	{% endfor %}
+<div class="ds-thread" 
+	data-thread-key="/2016/11/28/hello-github-blog.html"
+	data-title="Github Blog添加评论功能（多说）"
+	data-url="http://blog.heytobye.com/2016/11/28/hello-github-blog.html">
+</div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"heytobye"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
 {% endhighlight %}
 
 当然你可以将<sctript></sctript>添加至你的JS文件内。
