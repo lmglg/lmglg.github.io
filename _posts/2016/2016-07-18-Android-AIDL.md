@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AIDL 学习笔记
+author:[DONGChuan](http://dongchuan.github.io)
 category: android
 tags: [android]
 ---
