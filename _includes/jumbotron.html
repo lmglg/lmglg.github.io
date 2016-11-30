@@ -6,12 +6,12 @@
                 {% if page.subtitle %}
                     {{ page.subtitle }}
                 {% endif %}
-				{% if page.author %}
-                 Author By:{{ page.author }}
-                {% endif %}
                 {% if page.date %}
                 <span class="octicon octicon-calendar"></span> {{ page.date | date: "%Y/%m/%d" }}
-                {% endif %}
+                {% endif %}				
+				{% if page.author %}
+                 &nbsp;&nbsp;Author By:{{ page.author }}
+                {% endif %}				
             </span>
         </div>
     </div>
