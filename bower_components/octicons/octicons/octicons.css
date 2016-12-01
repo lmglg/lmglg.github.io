@@ -224,5 +224,5 @@
 .octicon-remove-close:before,
 .octicon-x:before { content: '\f081'} /*  */
 .octicon-zap:before { content: '\26A1'} /* ⚡ */
-.octicon-mark-timg:before{
-	content: '../svg/timg.svg';}
+.octicon-mark-timg:before{content:' ';
+	background-image: url(../svg/timg.svg);}
