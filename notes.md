@@ -5,4 +5,4 @@ menu: notes
 css: ['open-source.css']
 javascript: ['underscore-min.js']
 ---
-{% "{{ site.url }}/meta/index.html" %}
+{% include notes.html %}
