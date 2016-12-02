@@ -9,7 +9,7 @@
 title: 非黑即白的彩色地带
 name: HeyToBye
 email: youresky@gmail.com
-location: Nice, France
+location: Shanghai, China
 company: HeyToBye
 company_url: http://blog.heytobye.com
 github_url: https://github.com/lmglg
@@ -56,8 +56,8 @@ navs:
     label: Home
 
   -
-    href: /open-source
-    label: Open-Source
+    href: /notes
+    label: notes
 
   -
     href: /blog
